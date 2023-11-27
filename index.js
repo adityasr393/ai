@@ -133,31 +133,23 @@
 // blog.listen(4000);
 // console.log("Server is running on port 4000");
 
-// const db = require('./src/DataBase/mongo');
-// const express = require('express');
-// const cors = require('cors')
-// // const mongoose = require('mongoose');
-// const apis = require('./src/routes/routes');
-// // const dotenv = require('dotenv');
-// const bodyParser = require('body-parser');
-// const app = express();
+const db = require('./src/DataBase/mongo');
+const express = require('express');
+const cors = require('cors')
+// const mongoose = require('mongoose');
+const apis = require('./src/routes/routes');
+// const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+const app = express();
 
-// // dotenv.config({path:'env'});
-// // const port = process.env.PORT;
-// // console.log(port);
-// app.use(bodyParser.json());
-// app.use(cors());
-// app.use('/',apis);
+// dotenv.config({path:'env'});
+// const port = process.env.PORT;
+// console.log(port);
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/',apis);
 
 
-// app.listen(3001, ()=>{
-//     console.log(`server is running on port 3001`);
-// });
-const mongoose = require('mongoose');
-const scrapeController = require('./src/controllers/scrapecontroller');
-
-// Connect to the MongoDB database
-mongoose.connect('mongodb+srv://aditya:1234567890@cluster0.oje5zln.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Run the scraping function through the controller
-scrapeController.scrapeWebsite();
+app.listen(3001, ()=>{
+    console.log(`server is running on port 3001`);
+});

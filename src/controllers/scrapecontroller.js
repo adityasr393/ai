@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const H4Model = require('../schema/Schema'); // Adjust the path accordingly
+const H4Model = require('../schema/categoryschema'); // Adjust the path accordingly
 
 async function scrapeWebsite() {
   try {
